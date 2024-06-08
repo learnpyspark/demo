@@ -14,6 +14,6 @@ test_df = spark.read.option('header', 'true') \
                     .load("D:\\Downloads\\test1.csv")
 
 test_df.printSchema()
-#test_df = test_df.withColumn("AvgSalary", (col("Salary")/col("Experience")).cast("Integer"))
-#test_df = test_df.withColumn('Gender', lit('male'))
+test_df = test_df.withColumn("AvgSalary", (col("Salary")/col("Experience")).cast("Integer"))
+test_df = test_df.withColumn('Gender', lit('male'))
 test_df.show()
